@@ -46,18 +46,23 @@
 
     <section class="container_docs" >
         <h1>What is CPU Scheduling?</h1>
-        <p>CPU Scheduling is a process of determining which process will own CPU for execution while another process is
-            on hold. The main task of CPU scheduling is to make sure that whenever the CPU remains idle, the OS at least
-            select one of the processes available in the ready queue for execution. The selection process will be
-            carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.
+        <p>CPU Scheduling is a process of determining which process will own CPU
+            for execution while another process is on hold. The main task of CPU
+            scheduling is to make sure that whenever the CPU remains idle, the OS
+            at least select one of the processes available in the ready queue for
+            execution. The selection process will be carried out by the CPU
+            scheduler. It selects one of the processes in memory that are ready
+            for execution.
         </p>
     </section>
 
     <section class="container_docs" data-aos="zoom-in-up">
         <h1>Why CPU Scheduling?</h1>
-        <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
-            waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
-            use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br>
+        <p>A typical process involves both I/O time and CPU time. In a uni
+          programming system like MS-DOS, time spent waiting for I/O is wasted
+          and CPU is free during this time. In multi programming systems, one
+          process can use CPU while another is waiting for I/O. This is possible
+          only with process scheduling.<br><br>
             <strong>Objectives of Process Scheduling Algorithm</strong>
             <li>Max CPU utilization [Keep CPU as busy as possible]</li>
             <li>Fair allocation of CPU.</li>
@@ -98,22 +103,27 @@
 
     <section class="container_docs" data-aos="zoom-in-up">
         <h1>Types of CPU Scheduling</h1>
-        <p>There is mainly two major types of CPU Scheduling which is listed below.There is sub-types of this algorithm also. we have discussed all algorithm in details below. </p>
+        <p>There is mainly two major types of CPU Scheduling which is listed
+            below. There is sub-types of this algorithm also. We have discussed
+            all algorithm in details below: </p>
         <li>Preemptive Algorithm</li>
         <li>Non Preemptive Algorithm</li>
         <br>
 
         <p><strong class="bold">Preemptive Scheduling</strong><br><br>
-            In Preemptive Scheduling, the tasks are mostly assigned with their priorities. Sometimes it is important to
-            run a task with a higher priority before another lower priority task, even if the lower priority task is
-            still running. The lower priority task holds for some time and resumes when the higher priority task
-            finishes its execution.<br><br>
+            In Preemptive Scheduling, the tasks are mostly assigned with their
+          priorities. Sometimes it is important to run a task with a higher
+          priority before another lower priority task, even if the lower
+          priority task is still running. The lower priority task holds for some
+          time and resumes when the higher priority task finishes its execution.<br><br>
             <br>
             <strong class="bold">Non-Preemptive Scheduling</strong><br><br>
-            In this type of scheduling method, the CPU has been allocated to a specific process. The process that keeps
-            the CPU busy will release the CPU either by switching context or terminating. It is the only method that can
-            be used for various hardware platforms. That’s because it doesn’t need special hardware (for example, a
-            timer) like preemptive scheduling.
+            In this type of scheduling method, the CPU has been allocated to a
+            specific process. The process that keeps the CPU busy will release the
+            CPU either by switching context or terminating. It is the only method
+            that can be used for various hardware platforms. That’s because it
+            doesn’t need special hardware (for example, a timer) like preemptive
+            scheduling.
         </p>
 
         
@@ -123,141 +133,252 @@
 
     <section class="container_docs" data-aos="zoom-in-up">
         <h1>Types of CPU scheduling Algorithm</h1>
-        <p>There are mainly six types of process scheduling algorithm</p>
+        <p>There are five types of process scheduling algorithm</p>
         <!-- <lo> -->
-        <li>First Come First Serve (FCFS)</li>
+        <li>First Come First Serve (FCFS) Scheduling</li>
         <li>Shortest-Job-First (SJF) Scheduling</li>
-        <li>Shortest Remaining Time</li>
+        <li>Shortest Remaining Time First (SRTF) Scheduling</li>
         <li>Priority Scheduling</li>
         <li>Round Robin Scheduling</li>
-        <li>Multilevel Queue Scheduling</li>
         <br>
     </section>
 
 
 
     <section class="container_docs" data-aos="zoom-in-up">
-        <h1>1) First Come First Serve</h1>
-        <p>First Come First Serve is the full form of FCFS. It is the easiest and most simple CPU scheduling algorithm.
-            In this type of algorithm, the process which requests the CPU gets the CPU allocation first. This scheduling
-            method can be managed with a FIFO queue.<br><br>
-
-            As the process enters the ready queue, its PCB (Process Control Block) is linked with the tail of the queue.
-            So, when CPU becomes free, it should be assigned to the process at the beginning of the queue.</p>
-
-        <h4>
-            <li>Advantages</li>
-        </h4>
-        <p>1. It is simple and easy to understand.<br></p>
+        <h1>1) First Come First Serve Scheduling</h1>
+        <p>First Come First Serve (FCFS) is a scheduling which is considered to
+            be the easiest and simplest of all operating system scheduling
+            algorithms. First come first serve scheduling algorithm states that
+            the process that requests the CPU first is allocated the CPU first and
+            is implemented by using FIFO queue.</p>
 
         <h4>
-            <li>Disadvantages</li>
+            <li>Characteristics:</li>
         </h4>
-        <p>1. The process with less execution time suffer i.e. waiting time is often quite long.<br><br>
-            2. Favors CPU Bound process then I/O bound process.<br><br>
-            3. FCFS algorithm is particularly troublesome for time-sharing systems, where it is important that each user
-            get a share of the CPU at regular intervals.</p>
+        <p>1. FCFS supports non-preemptive and preemptive CPU scheduling
+            algorithms.
+            <br />
+            2. Tasks are always executed on a First-come, First-serve concept.
+            <br />
+            3. FCFS is easy to implement and use.
+            <br />
+            4. This algorithm is not much efficient in performance, and the wait
+            time is quite high.
+            <br />
+
+            <h4>
+                <li>Advantages:</li>
+            </h4>
+            <p>1. Easy to implement <br />
+                2. First come, first serve method
+                <br />
+            </p>
+            <h4>
+                <li>Disadvantages:</li>
+              </h4>
+              <p>
+                1. FCFS suffers from Convoy effect.
+                <br />
+                2. The average waiting time is much higher than the other
+                algorithms.
+                <br />
+                3. FCFS is very simple and easy to implement and hence not much
+                efficient.
+                <br />
+              </p>
+            <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
+        </p>
+        
+    </section>
+
+    <section class="container_docs" data-aos="zoom-in-up">
+        <h1>2) Shortest Job First Scheduling</h1>
+        <p>Shortest job first (SJF) is a scheduling process that selects the
+            waiting process with the smallest execution time to execute next. This
+            scheduling method may or may not be preemptive. Significantly reduces
+            the average waiting time for other processes waiting to be executed.
+            The full form of SJF is Shortest Job First.<br></p>
+
+        <h4>
+            <li>Characteristics:</li>
+        </h4>
+        <p>
+            1. Shortest Job first has the advantage of having a minimum average
+            waiting time among all operating system scheduling algorithms.
+            <br />
+            2. It is associated with each task as a unit of time to complete.
+            <br />
+            3. It may cause starvation if shorter processes keep coming. <br />
+            4. This problem can be solved using the concept of ageing.
+            <br />
+          </p>
+        <h4>
+            <li>Advantages:</li>
+        </h4>
+        <p>
+            1. As SJF reduces the average waiting time thus, it is better than
+            the first come first serve scheduling algorithm.
+            <br />
+            2. It is generally used for long term scheduling
+            <br />
+          </p>
+
+        <h4>
+            <li>Disadvantages:</li>
+        </h4>
+        <p>
+            1. One of the demerit SJF has is starvation.
+            <br />
+            2. Many times it becomes complicated to predict the length of the
+            upcoming CPU request
+            <br />
+          </p>
             <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
         <br>
     </section>
 
     <section class="container_docs" data-aos="zoom-in-up">
-        <h1>2) Shortest Remaining Time</h1>
-        <p>The full form of SRT is Shortest remaining time. It is also known as SJF preemptive scheduling. In this
-            method, the process will be allocated to the task, which is closest to its completion. This method prevents
-            a newer ready state process from holding the completion of an older process.<br></p>
-
-        <h4>
-            <li>Advantages</li>
-        </h4>
-        <p>1. The main advantage of the SRTF algorithm is that it makes the processing of the jobs faster than the SJF
-            algorithm, mentioned it’s overhead charges are not counted.</p>
-
-        <h4>
-            <li>Disadvantages</li>
-        </h4>
-        <p>1. In SRTF, the context switching is done a lot more times than in SJN due to more consumption of the CPU's
-            valuable time for processing. The consumed time of CPU then adds up to its processing time and which then
-            diminishes the advantage of fast processing of this algorithm.<br></p>
-            <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
-        <br>
-    </section>
-
-    <section class="container_docs" data-aos="zoom-in-up">
-        <h1>3) Priority Based Scheduling</h1>
-        <p>Priority scheduling is a method of scheduling processes based on priority. In this method, the scheduler
-            selects the tasks to work as per the priority.<br><br>
-
-            Priority scheduling also helps OS to involve priority assignments. The processes with higher priority should
-            be carried out first, whereas jobs with equal priorities are carried out on a round-robin or FCFS basis.
-            Priority can be decided based on memory requirements, time requirements, etc.<br><br>
+        <h1>3) Shortest Remaining Time First Scheduling</h1>
+        <p>Shortest Remaining Time First (SRTF) is the preemptive version of the
+            Shortest job first which we have discussed earlier where the processor
+            is allocated to the job closest to completion. In SRTF the process
+            with the smallest amount of time remaining until completion is
+            selected to execute.<br><br>
 
         </p>
         <h4>
-            <li>Advantages</li>
+            <li>Characteristics:</li>
         </h4>
-        <p>1. This provides a good mechanism where the relative importance of each process maybe precisely defined.<br>
+        <p>1. SRTF algorithm makes the processing of the jobs faster than SJF
+            algorithm, given it’s overhead charges are not counted.
+            <br />
+            2. The context switch is done a lot more times in SRTF than in SJF
+            and consumes the CPU’s valuable time for processing. This adds up to
+            its processing time and diminishes its advantage of fast processing.<br>
+        </p>
+        <h4>
+            <li>Advantages:</li>
+        </h4>
+        <p>1. In SRTF the short processes are handled very fast.
+            <br />
+            2. The system also requires very little overhead since it only makes
+            a decision when a process completes or a new process is added.
+            <br /><br>
         </p>
 
         <h4>
-            <li>Disadvantages</li>
+            <li>Disadvantages:</li>
         </h4>
-        <p>1. If high priority processes use up a lot of CPU time, lower priority processes may starve and be postponed
-            indefinitely.The situation where a process never gets scheduled to run is called starvation<br><br>
-            2. Another problem is deciding which process gets which priority level assigned to it..<br></p>
+        <p>1. Like the shortest job first, it also has the potential for
+            process starvation.
+            <br />
+            2. Long processes may be held off indefinitely if short processes
+            are continually added.
+            <br /><br></p>
             <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
         <br>
     </section>
 
     <section class="container_docs" data-aos="zoom-in-up">
-        <h1>4) Round-Robin Scheduling</h1>
-        <p>Round robin is the oldest, simplest scheduling algorithm. The name of this algorithm comes from the
-            round-robin principle, where each person gets an equal share of something in turn. It is mostly used for
-            scheduling algorithms in multitasking. This algorithm method helps for starvation free execution of
-            processes.<br><br></p>
+        <h1>4) Priority Scheduling</h1>
+        <p>Preemptive Priority CPU Scheduling Algorithm is a pre-emptive method
+            of CPU scheduling algorithm that works based on the priority of a
+            process. In this algorithm, the editor sets the functions to be as
+            important, meaning that the most important process must be done first.
+            <br><br>
+            In the case of any conflict, that is, where there are more than one
+          processor with equal value, then the most important CPU planning
+          algorithm works on the basis of the FCFS (First Come First Serve)
+          algorithm.
+        </p>
 
         <h4>
-            <li>Advantages</li>
+            <li>Characteristics:</li>
         </h4>
-        <p>1. Every process gets an equal share of the CPU.<br><br>
-            2. RR is cyclic in nature, so there is no starvation.</p>
+        <p>1. Schedules tasks based on priority.
+            <br />
+            2. When the higher priority work arrives while a task with less
+            priority is executed, the higher priority work takes the place of
+            the less priority one. <br />
+            3. The latter is suspended until the execution is complete.
+            <br />
+            4. Lower is the number assigned, higher is the priority level of a
+            process.
+            <br /></p>
+        <h4>
+            <li>Advantages:</li>
+        </h4>
+        <p>1. The average waiting time is less than FCFS
+            <br />
+            2. Less complex
+            <br />
+        </p>
 
         <h4>
-            <li>Disadvantages</li>
+            <li>Disadvantages:</li>
         </h4>
-        <p>1. Setting the quantum too short, increases the overhead and lowers the CPU efficiency, but setting it too
-            long may cause poor response to short processes.<br><br>
-            2. Average waiting time under the RR policy is often long.<br>
+        <p>1. One of the most common demerits of the Preemptive priority CPU
+            scheduling algorithm is the Starvation Problem.
+            <br />
+            2. This is the problem in which a process has to wait for a longer
+            amount of time to get scheduled into the CPU. This condition is
+            called the starvation problem.
+            <br />
         </p>
         <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
         <br>
     </section>
 
     <section class="container_docs" data-aos="zoom-in-up">
-        <h1>5) Shortest Job First</h1>
-        <p>SJF is a full form of (Shortest job first) is a scheduling algorithm in which the process with the shortest
-            execution time should be selected for execution next. This scheduling method can be preemptive or
-            non-preemptive. It significantly reduces the average waiting time for other processes awaiting
-            execution.<br></p>
+        <h1>5) Round Robin Scheduling</h1>
+        <p>Round Robin (RR) is a CPU scheduling algorithm where each process is
+            cyclically assigned a fixed time slot. It is the preemptive version of
+            First come First Serve CPU Scheduling algorithm. Round Robin CPU
+            Algorithm generally focuses on Time Sharing technique.<br></p>
 
         <h4>
-            <li>Advantages</li>
+            <li>Characteristics:</li>
         </h4>
-        <p>1. Shortest jobs are favored.<br><br>
-            2. It is provably optimal, in that it gives the minimum average waiting time for a given set of processes.
+        <p>1. It’s simple, easy to use, and starvation-free as all processes
+            get the balanced CPU allocation.
+            <br />
+            2. One of the most widely used methods in CPU scheduling as a core.
+            <br />
+            3. It is considered preemptive as the processes are given to the CPU
+            for a very limited time.
+            <br />
+        </p>
+        <h4>
+            <li>Advantages:</li>
+        </h4>
+        <p>1. Round robin seems to be fair as every process gets an equal share
+            of CPU.
+            <br />
+            2. The newly created process is added to the end of the ready queue.
+            <br />
+            3. RR is cyclic in nature, so there is no starvation.
+            <br />
         </p>
 
         <h4>
             <li>Disadvantages</li>
         </h4>
-        <p>1. SJF may cause starvation, if shorter processes keep coming. This problem is solved by aging..<br><br>
-            2. It cannot be implemented at the level of short term CPU scheduling.<br></p>
+        <p>1. Setting the quantum too short increases the overhead and lowers
+            the CPU efficiency, but setting it too long may cause a poor
+            response to short processes.
+            <br />
+            2. The average waiting time under the RR policy is often long.
+            <br />
+            3. If time quantum is very high then RR degrades to FCFS.
+            <br />
+        </p>
 
             <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
         <br>
     </section>
 
-    <section class="container_docs" data-aos="zoom-in-up">
+    <!-- <section class="container_docs" data-aos="zoom-in-up">
         <h1>6) Multiple-Level Queues Scheduling</h1>
         <p>This algorithm separates the ready queue into various separate queues. In this method, processes are assigned
             to a queue based on a specific property of the process, like the process priority, size of the memory,
@@ -279,7 +400,7 @@
 
         <button class="btn_1" onclick="gotoSimulator();">Go to Simulator</button>
         <br>
-    </section>
+    </section> -->
 
      
     <section class="footer">
@@ -288,9 +409,9 @@
 
         <div class="icons">
             <a href="https://www.facebook.com"><i  class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/invites/contact/?i=17s1o7wfms500&utm_content=i08g8yn"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/Krutarth12345?t=JASTMDZLzUB4VOR-OEd_kg&s=09"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/krutarth-patel-653065205 "><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/"><i class="fab fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/ "><i class="fab fa-linkedin"></i></a>
         </div>
             
         <p>Made With <i class="far fa-heart"></i> by Gurusharan & Satyanarayan.</p>
